@@ -724,6 +724,29 @@
           transform: translateX(100%);
         }
       }
+      
+
+      @media only screen and (max-width: 600px) {
+        body {
+          overflow-y: auto;
+          height: 100vh; /* ajuste o valor para a altura da imagem */
+          
+          background-image: url(https://davifeital.github.io/feitalwebdesenvolvimentos/img/FEITAL.png); 
+          background-size: cover;
+        }
+        h1{
+          font-family: Lucida;
+          font-size: 55px;
+          position: absolute;
+          top: 300px;
+          left: 330px;
+          color: white;
+          text-shadow: -3px -3px 0 black, 3px -3px 0 black, -3px 3px 0 black, 1px 1px 0 white;
+          
+          animation: bounce 2s infinite;
+        }
+      }
+      
 
     </style>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" />
@@ -988,9 +1011,13 @@
     </script>
     
     <!-- Seu conteúdo aqui -->
+    
 
     <div id="janelaCatalogobasico">
-      <button id="adicionar-campos">Adicionar campos</button>
+      <a href="https://mpago.la/2qKqNZM" target="_blank">
+        <button id="adicionar-campos">Adicionar campos</button>
+      </a>
+      <
 
       <button id="fechar-janelabasico" onclick="fecharJanelabas()">X</button>
       <label for="nome-completo">Nome completo:</label>
