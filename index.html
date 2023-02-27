@@ -1,0 +1,1087 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Minha Empresa - Site</title>
+    <style>
+      button {
+        background-color: rgb(54, 214, 54);
+        color: white;
+        font-size: 16px;
+        padding: 5px 10px;
+        border-radius: 5px;
+        border: none;
+        cursor: pointer;
+        position: absolute;
+        top: 126px;
+        right: 280px;
+      }
+      h1{
+        font-family: Lucida;
+        font-size: 55px;
+        position: absolute;
+        top: 230px;
+        left: 330px;
+        color: white;
+        text-shadow: -3px -3px 0 black, 3px -3px 0 black, -3px 3px 0 black, 1px 1px 0 white;
+        
+        animation: bounce 2s infinite;
+      }
+
+      @keyframes bounce {
+        0%, 100% {transform: translateY(0);}
+        50% {transform: translateY(-20px);}
+      }
+      p{
+        font-family: Lucida;
+        font-size: 55px;
+        position: absolute;
+        top: 350px;
+        left: 340px;
+        color: white;
+        text-shadow: -3px -3px 0 black, 3px -3px 0 black, -3px 3px 0 black, 1px 1px 0 white;
+        animation: bounce 2s infinite;
+        }
+
+        @keyframes bounce {
+          0%, 100% {transform: translateY(0);}
+          50% {transform: translateY(-20px);}
+        }
+      
+
+      button:hover {
+        background-color: darkgreen;
+      }
+
+      button.instagram {
+        background-color: rgb(194, 55, 55);
+        margin-right: 5%;
+        top: 126px;
+        right: 480px;
+      }
+
+      button.instagram:hover {
+        background-color: rgb(194, 55, 55);
+      }
+
+      body {
+        overflow-y: auto;
+        height: 100vh; /* ajuste o valor para a altura da imagem */
+        background-image: url(img/Feital.png); 
+        background-size: cover;
+      }
+      button#botao-exibir {
+        position: absolute;
+        top: 126px; /* altere este valor para ajustar a posição vertical do botão */
+        right: 663px; /* altere este valor para ajustar a posição horizontal do botão */
+        background-color: rgb(155, 54, 214);
+        color: white;
+        font-size: 16px;
+        padding: 5px 10px;
+        border-radius: 5px;
+        border: none;
+        cursor: pointer;
+      }
+
+      
+      #catalogo {
+        display: none;
+        position: absolute;
+        top: 180px;
+        left: 790px;
+        width: auto;
+        height: 100;
+        max-width: 100%;
+        max-height: 52%;
+        object-fit: contain;
+        border: 0.5px solid white;
+        margin: 20px;
+        
+        transition: transform 0.4s ease-in-out; /* adiciona uma transição suave */
+      }
+
+      #catalogo:hover  {
+        animation: shake 1.5s;
+        transform: translateY(-10px); /* desloca o botão 10 pixels para cima */
+      }
+
+      @keyframes shake {
+        10%, 90% {
+          transform: translate3d(-1px, 0, 0);
+        }
+
+        20%, 80% {
+          transform: translate3d(2px, 0, 0);
+        }
+
+        30%, 50%, 70% {
+          transform: translate3d(-4px, 0, 0);
+        }
+
+        40%, 60% {
+          transform: translate3d(4px, 0, 0);
+        }
+      }
+      
+      
+      #catalogoweb {
+        display: none;
+        position: absolute;
+        top: 180px;
+        left: 540px;
+        width: 100;
+        height: 100;
+        max-width: 100%;
+        max-height: 43%;
+        object-fit: contain;
+        margin: 20px;
+        border: 0.5px solid white;
+        transition: transform 0.4s ease-in-out; /* adiciona uma transição suave */
+      }
+
+      #catalogoweb:hover  {
+        animation: shake 1.5s;
+        transform: translateY(-10px); /* desloca o botão 10 pixels para cima */
+      }
+
+      @keyframes shake {
+        10%, 90% {
+          transform: translate3d(-1px, 0, 0);
+        }
+
+        20%, 80% {
+          transform: translate3d(2px, 0, 0);
+        }
+
+        30%, 50%, 70% {
+          transform: translate3d(-4px, 0, 0);
+        }
+
+        40%, 60% {
+          transform: translate3d(4px, 0, 0);
+        }
+      }
+      #catalogobasico {
+        display: none;
+        position: absolute;
+        top: 180px;
+        left: 290px;
+        width: auto;
+        height: auto;
+        max-width: 100%;
+        max-height: 100%;
+        object-fit: contain;
+        margin: 20px;
+        border: 0.5px solid white;
+        transition: transform 0.4s ease-in-out; /* adiciona uma transição suave */
+        
+      }
+
+      #catalogobasico:hover  {
+        animation: shake 1.5s;
+        transform: translateY(-10px); /* desloca o botão 10 pixels para cima */
+      }
+
+      @keyframes shake {
+        10%, 90% {
+          transform: translate3d(-1px, 0, 0);
+        }
+
+        20%, 80% {
+          transform: translate3d(2px, 0, 0);
+        }
+
+        30%, 50%, 70% {
+          transform: translate3d(-4px, 0, 0);
+        }
+
+        40%, 60% {
+          transform: translate3d(4px, 0, 0);
+        }
+      }
+
+      #imgseta{
+        
+        position: absolute;
+        width: 140px;
+        height: 100px;
+        top: 155px;
+        left: 552px;
+        animation: pulse 2s infinite;
+      }
+
+      @keyframes pulse {
+        0% {
+          transform: scale(1);
+        }
+        50% {
+          transform: scale(1.1);
+        }
+        100% {
+          transform: scale(1);
+        }
+        
+      
+
+      }
+      #plano-basico {
+        display: none;
+        font-family: infinite;
+        font-size: 28px;
+        color: rgb(115, 255, 0);
+        text-shadow: -3px -3px 0 black, 3px -3px 0 black, -3px 3px 0 black, 1px 1px 0 green;
+        position: absolute;
+        top: 534px;
+        left: 350px;
+        font-weight: bold;
+
+      }
+      #plano-basicodes {
+        display: none;
+        font-family:infinite;
+        font-size: 32;
+        color: rgb(224, 7, 7);
+        position: absolute;
+        top: 520px;
+        left: 330px;
+        text-decoration: line-through;
+        font-weight: bold;
+      }
+    
+      #plano-web {
+        display: none;
+        font-family: infinite;
+        font-size: 28px;
+        color: rgb(115, 255, 0);
+        text-shadow: -3px -3px 0 black, 3px -3px 0 black, -3px 3px 0 black, 1px 1px 0 green;
+        position: absolute;
+        top: 534px;
+        left: 580px;
+        font-weight: bold;
+
+      }
+      #plano-webdes {
+        display: none;
+        font-family:infinite;
+        font-size: 32;
+        color: rgb(224, 7, 7);
+        position: absolute;
+        top: 520px;
+        left: 560px;
+        text-decoration: line-through;
+        font-weight: bold;
+      }
+    
+      #plano-ultra {
+        display: none;
+        font-family: infinite;
+        font-size: 28px;
+        color: rgb(115, 255, 0);
+        text-shadow: -3px -3px 0 black, 3px -3px 0 black, -3px 3px 0 black, 1px 1px 0 green;
+        position: absolute;
+        top: 554px;
+        left: 850px;
+        font-weight: bold;
+
+      }
+      #plano-ultrades {
+        display: none;
+        font-family:infinite;
+        font-size: 32;
+        color: rgb(224, 7, 7);
+        position: absolute;
+        top: 540px;
+        left: 830px;
+        text-decoration: line-through;
+        font-weight: bold;
+      }
+      
+      .modal {
+        display: none;
+        position: relative;
+        z-index: 1;
+        left: 0;
+        top: -88px;
+        width: 109;
+        height: 551px;
+        overflow: auto;
+        background-color: rgba(0,0,0,0.4);
+      }
+
+      .modal-content {
+        background-image: url(bg_tela_login.png); 
+        margin: 10% auto;
+        padding: 20px;
+        border: 0px solid white;
+        width: 40%;
+        height: 70px;
+        max-width: 500px;
+        text-align: center;
+      }
+
+      .close {
+        color: #aaa;
+        float: right;
+        font-size: 28px;
+        font-weight: bold;
+      }
+
+      .close:hover,
+      .close:focus {
+        color: white;
+        text-decoration: none;
+        cursor: pointer;
+        font-weight: bold;
+      }
+      #login-btn {
+        
+        background-color: #3e689c;
+        color: white;
+        font-size: 16px;
+        padding: 5px 10px;
+        border-radius: 5px;
+        border: none;
+        cursor: pointer;
+        position: absolute;
+        top: 126px;
+        right: 800px;
+        background-color: #0069d9;
+      }
+      #botao-cadastrar{
+        background-color:#3272b6
+      }
+      label[for="email"], label[for="password"]  {
+        color: white; /* ou a cor desejada */
+      }
+      .hide {
+        display: none;
+      }
+      #robo{
+        position: absolute;
+        width: 235px;
+        height: 341px;
+        top: 264px;
+        left: 35px;
+        
+        
+      }
+
+      .shake {
+        animation: shake 1.5s;
+      }
+
+      @keyframes shake {
+        10%, 90% {
+          transform: translate3d(-1px, 0, 0);
+        }
+
+        20%, 80% {
+          transform: translate3d(2px, 0, 0);
+        }
+
+        30%, 50%, 70% {
+          transform: translate3d(-4px, 0, 0);
+        }
+
+        40%, 60% {
+          transform: translate3d(4px, 0, 0);
+        }
+      
+      }
+      #janelaCatalogobasico {
+        display: none;
+        position: absolute;
+        top: 176px;
+        left: 280px;
+        width: 795px;
+        height: 463px;
+        background-image: url(img/fundo_janela_planos.png);
+        background-size: cover;
+        z-index: 999;
+        
+
+      }
+      #janelaCatalogoweb {
+        display: none;
+        position: absolute;
+        top: 176px;
+        left: 280px;
+        width: 795px;
+        height: 463px;
+        background-image: url(img/fundo_janela_planos.png);
+        background-size: cover;
+        z-index: 999;
+      }
+      #janelaCatalogoultra {
+        display: none;
+        position: absolute;
+        top: 176px;
+        left: 280px;
+        width: 795px;
+        height: 463px;
+        background-image: url(img/fundo_janela_planos.png);
+        background-size: cover;
+        z-index: 999;
+      }
+      #fechar-janelabasico {
+        background-color: red;
+        top: 5px;
+        right: 5px;
+      }
+      #fechar-janelaweb {
+        background-color: red;
+        top: 5px;
+        right: 5px;
+      }
+      #fechar-janelaultra {
+        background-color: red;
+        top: 5px;
+        right: 5px;
+      }
+      #janelaCatalogobasico input[name='nome-completo'] {
+        color: black; 
+        position: absolute;
+        top: 55px;
+        left: 189px;
+      }
+      #janelaCatalogobasico label[for='nome-completo'] {
+        color: white; 
+        text-shadow: -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black, 1px 1px 0 white;
+        font-size: 24px;
+        position: absolute;
+        top: 50px;
+        left: 20px;
+      }
+      #janelaCatalogobasico input[name='cpf'] {
+        position: absolute;
+        top: 103px;
+        left: 80px;
+      }
+      #janelaCatalogobasico label[for='cpf'] {
+        color: white;
+        text-shadow: -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black, 1px 1px 0 white; 
+        font-size: 24px;
+        position: absolute;
+        top: 100px;
+        left: 20px;
+      }
+      #janelaCatalogobasico input[name='email'] {
+        position: absolute;
+        top: 153px;
+        left: 90px;
+      }
+      #janelaCatalogobasico label[for='email'] {
+        color: white; 
+        text-shadow: -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black, 1px 1px 0 white;
+        font-size: 24px;
+        position: absolute;
+        top: 150px;
+        left: 20px;
+      }
+      #janelaCatalogobasico input[name='endereco'] {
+        position: absolute;
+        top: 203px;
+        left: 120px;
+      }
+      #janelaCatalogobasico label[for='endereco'] {
+        color: white; 
+        text-shadow: -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black, 1px 1px 0 white;
+        font-size: 24px;
+        position: absolute;
+        top: 200px;
+        left: 20px;
+      }
+      #janelaCatalogobasico input[name='data-nascimento'] {
+        position: absolute;
+        top: 254px;
+        left: 223px;
+      }
+      #janelaCatalogobasico label[for='data-nascimento'] {
+        color: white; 
+        text-shadow: -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black, 1px 1px 0 white;
+        font-size: 24px;
+        position: absolute;
+        top: 250px;
+        left: 20px;
+      }
+      #janelaCatalogobasico select[name='tipo-comercio'] {
+          position: absolute;
+          top: 305px;
+          left: 200px;
+      }
+      #janelaCatalogobasico label[for='tipo-comercio'] {
+        color: white; 
+        text-shadow: -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black, 1px 1px 0 white;
+        font-size: 24px;
+        position: absolute;
+        top: 300px;
+        left: 20px;
+      }
+
+      #janelaCatalogoweb input[name='nome-completo'] {
+        color: black; 
+        position: absolute;
+        top: 55px;
+        left: 189px;
+      }
+      #janelaCatalogoweb label[for='nome-completo'] {
+        color: white; 
+        text-shadow: -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black, 1px 1px 0 white;
+        font-size: 24px;
+        position: absolute;
+        top: 50px;
+        left: 20px;
+      }
+      #janelaCatalogoweb input[name='cpf'] {
+        position: absolute;
+        top: 103px;
+        left: 80px;
+      }
+      #janelaCatalogoweb label[for='cpf'] {
+        color: white;
+        text-shadow: -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black, 1px 1px 0 white; 
+        font-size: 24px;
+        position: absolute;
+        top: 100px;
+        left: 20px;
+      }
+      #janelaCatalogoweb input[name='email'] {
+        position: absolute;
+        top: 153px;
+        left: 90px;
+      }
+      #janelaCatalogoweb label[for='email'] {
+        color: white; 
+        text-shadow: -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black, 1px 1px 0 white;
+        font-size: 24px;
+        position: absolute;
+        top: 150px;
+        left: 20px;
+      }
+      #janelaCatalogoweb input[name='endereco'] {
+        position: absolute;
+        top: 203px;
+        left: 120px;
+      }
+      #janelaCatalogoweb label[for='endereco'] {
+        color: white; 
+        text-shadow: -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black, 1px 1px 0 white;
+        font-size: 24px;
+        position: absolute;
+        top: 200px;
+        left: 20px;
+      }
+      #janelaCatalogoweb input[name='data-nascimento'] {
+        position: absolute;
+        top: 254px;
+        left: 223px;
+      }
+      #janelaCatalogoweb label[for='data-nascimento'] {
+        color: white; 
+        text-shadow: -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black, 1px 1px 0 white;
+        font-size: 24px;
+        position: absolute;
+        top: 250px;
+        left: 20px;
+      }
+      #janelaCatalogoweb select[name='tipo-comercio'] {
+          position: absolute;
+          top: 305px;
+          left: 200px;
+      }
+      #janelaCatalogoweb label[for='tipo-comercio'] {
+        color: white; 
+        text-shadow: -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black, 1px 1px 0 white;
+        font-size: 24px;
+        position: absolute;
+        top: 300px;
+        left: 20px;
+      }
+
+
+      #janelaCatalogoultra input[name='nome-completo'] {
+        color: black; 
+        position: absolute;
+        top: 55px;
+        left: 189px;
+      }
+      #janelaCatalogoultra  label[for='nome-completo'] {
+        color: white; 
+        text-shadow: -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black, 1px 1px 0 white;
+        font-size: 24px;
+        position: absolute;
+        top: 50px;
+        left: 20px;
+      }
+      #janelaCatalogoultra  input[name='cpf'] {
+        position: absolute;
+        top: 103px;
+        left: 80px;
+      }
+      #janelaCatalogoultra  label[for='cpf'] {
+        color: white;
+        text-shadow: -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black, 1px 1px 0 white; 
+        font-size: 24px;
+        position: absolute;
+        top: 100px;
+        left: 20px;
+      }
+      #janelaCatalogoultra  input[name='email'] {
+        position: absolute;
+        top: 153px;
+        left: 90px;
+      }
+      #janelaCatalogoultra  label[for='email'] {
+        color: white; 
+        text-shadow: -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black, 1px 1px 0 white;
+        font-size: 24px;
+        position: absolute;
+        top: 150px;
+        left: 20px;
+      }
+      #janelaCatalogoultra  input[name='endereco'] {
+        position: absolute;
+        top: 203px;
+        left: 120px;
+      }
+      #janelaCatalogoultra  label[for='endereco'] {
+        color: white; 
+        text-shadow: -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black, 1px 1px 0 white;
+        font-size: 24px;
+        position: absolute;
+        top: 200px;
+        left: 20px;
+      }
+      #janelaCatalogoultra  input[name='data-nascimento'] {
+        position: absolute;
+        top: 254px;
+        left: 223px;
+      }
+      #janelaCatalogoultra  label[for='data-nascimento'] {
+        color: white; 
+        text-shadow: -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black, 1px 1px 0 white;
+        font-size: 24px;
+        position: absolute;
+        top: 250px;
+        left: 20px;
+      }
+      #janelaCatalogoultra  select[name='tipo-comercio'] {
+          position: absolute;
+          top: 305px;
+          left: 200px;
+      }
+      #janelaCatalogoultra  label[for='tipo-comercio'] {
+        color: white; 
+        text-shadow: -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black, 1px 1px 0 white;
+        font-size: 24px;
+        position: absolute;
+        top: 300px;
+        left: 20px;
+      }
+      .slide {
+        position: relative;
+        width: 1100px;
+        height: 104px;
+        overflow: hidden;
+      }
+      .slide img {
+        position: absolute;
+        width: 150;
+        height: 100%;
+        top: 0;
+        left: 256px;
+        opacity: 0;
+        animation: slide 18s infinite;
+      }
+      .slide img:first-child {
+        opacity: 1;
+        animation-delay: 0s;
+      }
+      .slide img:nth-child(2) {
+        animation-delay: 6s;
+      }
+      .slide img:last-child {
+        animation-delay: 12s;
+      }
+      @keyframes slide {
+        0% {
+          opacity: 0;
+          transform: translateX(-100%);
+        }
+        5% {
+          opacity: 1;
+          transform: translateX(0);
+        }
+        25% {
+          opacity: 1;
+          transform: translateX(0);
+        }
+        30% {
+          opacity: 0;
+          transform: translateX(100%);
+        }
+        100% {
+          opacity: 0;
+          transform: translateX(100%);
+        }
+      }
+
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" />
+  </head>
+  <body>
+    <div class="slide">
+      <img src="img/ads_apl.png" class="anuncio anuncio-atual">
+      <img src="img/ads_noti.png" class="anuncio anuncio-proxima">
+      <img src="img/ads_ger.png" class="anuncio anuncio-proxima2">
+      
+    </div>
+    
+    
+    
+    <h1></i></b>Mude a Gestão do seu negócio <br>
+    <div style="text-align: center;">com a</div> <br><b></b></i></h1>
+    <p></i><b>Feital Web Desenvolvimentos</b></i></p>
+    <a href="https://api.whatsapp.com/send?phone=5521979107232" target="_blank">
+      <button>Entrar em contato pelo WhatsApp</button>
+    </a>
+    <a href="https://www.instagram.com/feitalwebdev" target="_blank">
+      <button class="instagram"><i class="fab fa-instagram"></i> Instagram</button>
+    </a>
+    <div id="plano-basicodes" class="hide">De:R$ 599,90</div>
+    <div id="plano-basico" class="hide">Matricula:<br> R$ 399,90</div>
+    <div id="plano-webdes" class="hide">De:R$ 800,90</div>
+    <div id="plano-web" class="hide">Matricula:<br> R$ 599,90</div>
+    <div id="plano-ultrades" class="hide">De:R$ 1000,90</div>
+    <div id="plano-ultra" class="hide">Matricula:<br> R$ 749,90</div>
+    
+
+    
+    <button id="botao-exibir">Exibir catalogo</button>
+    <button id="catalogo" class="btn btn-primary btn-lg hide"  style="background-image: url(plano_ultra.png); width: 233px; height: 360px;"></button>
+    <button id="catalogoweb" class="btn btn-primary btn-lg hide"  style="background-image: url(plano_web.png); width: 233px; height: 360px;"></button>
+    
+    <button id="catalogobasico" class="btn btn-primary btn-lg hide" style="background-image: url(plano_basico.png); width: 233px; height: 320px;"></button>
+    <img id="imgseta" src="setar.png">
+    <img id="robo" src="robo.png">
+    <button id="login-btn" onclick="openModal()">Login</button>
+    <div id="login-modal" class="modal">
+      <div class="modal-content">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <h2>Login</h2>
+        <form>
+          <label for="email">E-mail:</label>
+          <input type="email" id="email" name="email" required>
+          <label for="password">Senha:</label>
+          <input type="password" id="password" name="password" required>
+          <button type="submit">Entrar</button>
+        </form>
+        <button id="botao-cadastrar" onclick="location.href='cadastro.html'">Criar conta</button>
+
+      </div>
+    
+    </div>
+    <script>
+      window.addEventListener("load", function() {
+        let robo = document.getElementById("robo");
+        setInterval(function() {
+          robo.classList.add("shake");
+          setTimeout(function() {
+            robo.classList.remove("shake");
+          }, 1500);
+        }, 4000);
+      });
+      const botaoCatalogo = document.getElementById("botao-exibir");
+      const h1 = document.querySelector('h1');
+      const p = document.querySelector('p');
+      const catalogo = document.getElementById("catalogo");
+      const catalogoweb = document.getElementById("catalogoweb");
+      const catalogobasico = document.getElementById("catalogobasico");
+      
+      let exibindoCatalogo = false;
+      // seleciona o botão "Exibir" pelo ID
+      var botaoExibir = document.getElementById("botao-exibir");
+      var divPlanoBasico = document.getElementById("plano-basicodes");
+      var divPlanoBasic = document.getElementById("plano-basico");
+      var divPlanowebdes = document.getElementById("plano-webdes");
+      var divPlanoweb = document.getElementById("plano-web");
+      var divPlanoultrades = document.getElementById("plano-ultrades");
+      var divPlanoultra = document.getElementById("plano-ultra");
+      botaoExibir.addEventListener("click", function() {
+        if (divPlanoBasico.style.display === "block") {
+          divPlanoBasico.style.display = "none";
+          divPlanoBasic.style.display="none";
+          divPlanowebdes.style.display="none";
+          divPlanoweb.style.display="none";
+          divPlanoultrades.style.display="none";
+          divPlanoultra.style.display="none";
+        } else {
+          divPlanoBasico.style.display = "block";
+          divPlanoBasic.style.display="block";
+          divPlanowebdes.style.display="block";
+          divPlanoweb.style.display="block";
+          divPlanoultrades.style.display="block";
+          divPlanoultra.style.display="block";
+        }
+        
+      });
+      
+
+      botaoCatalogo.addEventListener("click", function() {
+      const botaoExibir = document.getElementById('botao-exibir');
+      const planosBasicodes = document.getElementById('planos-basicodes');
+      const planosBasic = document.getElementById('planos-basico');
+      const planoswebdes = document.getElementById('planos-webdes');
+      const planosweb = document.getElementById('planos-web');
+      const planosultrades = document.getElementById('planos-ultrades');
+      const planosultra = document.getElementById('planos-ultra');
+      
+      
+      var catalogobasico = document.getElementById("catalogobasico");
+      var planobasico = document.getElementById("plano-basico");
+
+      catalogobasico.addEventListener("mouseover", function() {
+        planobasico.style.transform = "translateY(-10px) rotate(3deg)";
+        planobasico.style.transition = "transform 0.4s ease-in-out";
+      });
+
+      catalogobasico.addEventListener("mouseout", function() {
+        planobasico.style.transform = "";
+        planobasico.style.transition = "";
+      });
+      
+
+      var catalogoweb =document.getElementById("catalogoweb")
+      var planoweb = document.getElementById("plano-web")
+
+      catalogoweb.addEventListener("mouseover",function(){
+        planoweb.style.transform=  "translateY(-10px) rotate(3deg)";
+        planoweb.style.transform=  "transform 1s ease-in-out";
+      })
+      catalogoweb.addEventListener("mouseout", function() {
+        planoweb.style.transform = "";
+        planoweb.style.transition = "";
+      });
+
+      var catalogo =document.getElementById("catalogo")
+      var planoultra = document.getElementById("plano-ultra")
+
+      catalogo.addEventListener("mouseover",function(){
+        planoultra.style.transform=  "translateY(-10px) rotate(3deg)";
+        planoultra.style.transform=  "transform 1s ease-in-out";
+      })
+      catalogo.addEventListener("mouseout", function() {
+        planoultra.style.transform = "";
+        planoultra.style.transition = "";
+      });
+
+      
+      
+
+      
+      
+
+
+      botaoExibir.addEventListener('click', () => {
+        if (planosBasicodes.style.display === 'none') {
+          planosBasicodes.style.display = 'block';
+        } else {
+          planosBasicodes.style.display = 'none';
+        }
+      });
+        if (exibindoCatalogo) {
+          p.style.display = "block";
+          imgseta.style.display="block";
+          
+          
+          
+          
+        } else {
+          p.style.display = "none";
+          imgseta.style.display="none";
+        }
+        if (exibindoCatalogo) {
+          h1.style.display = "block";
+        } else {
+          h1.style.display = "none";
+        }
+        if (exibindoCatalogo) {
+          catalogo.style.display = "none";
+          exibindoCatalogo = false;
+        } else {
+          catalogo.style.display = "block";
+          exibindoCatalogo = true;
+        }
+
+        if (exibindoCatalogo) {
+          catalogoweb.style.display = "block";
+        } else {
+          catalogoweb.style.display = "none";
+        }
+
+        if (exibindoCatalogo) {
+          catalogobasico.style.display = "block";
+        } else {
+          catalogobasico.style.display = "none";
+        }
+        
+        
+      });
+      function openModal() {
+        document.getElementById("login-modal").style.display = "block";
+      }
+
+      function closeModal() {
+        document.getElementById("login-modal").style.display = "none";
+        document.addEventListener('keydown', function(event) {
+        if (event.key === 'Escape') { // Verifica se a tecla pressionada é a tecla "Esc"
+         closeModal(); // Chama a função closeModal() para fechar a janela de login
+        } 
+      })};
+          
+      document.getElementById("catalogobasico").addEventListener("click", function() {
+        document.getElementById("janelaCatalogobasico").style.display = "block";
+      });
+      document.getElementById("catalogo").addEventListener("click", function() {
+        document.getElementById("janelaCatalogoultra").style.display = "block";
+      });
+      document.getElementById("catalogoweb").addEventListener("click", function() {
+        document.getElementById("janelaCatalogoweb").style.display = "block";
+      
+      });
+      function fecharJanelabas() {
+        document.getElementById("janelaCatalogobasico").style.display = "none";
+      }
+      
+      function fecharJanelaw() {
+        document.getElementById("janelaCatalogoweb").style.display = "none";
+      }
+      
+      function fecharJanelaul() {
+        document.getElementById("janelaCatalogoultra").style.display = "none";
+      }
+      // Definir estilo CSS dos campos como "display: none"
+      document.getElementById("nome-completo").style.display = "none";
+      document.getElementById("cpf").style.display = "none";
+      document.getElementById("email").style.display = "none";
+      document.getElementById("endereco").style.display = "none";
+      document.getElementById("tipo-comercio").style.display = "none";
+
+      // Função para exibir campos quando a janela é aberta
+      
+      function exibirCampos() {
+        document.getElementById("nome-completo").style.display = "block";
+        document.getElementById("cpf").style.display = "block";
+        document.getElementById("email").style.display = "block";
+        document.getElementById("endereco").style.display = "block";
+        document.getElementById("tipo-comercio").style.display = "block";
+      }
+
+      // Adicionar evento de clique ao botão "Catalogo Básico"
+      document.getElementById("catalogobasico").addEventListener("click", function() {
+        document.getElementById("janelaCatalogobasico").style.display = "block";
+        exibirCampos();
+      });
+      
+      
+
+
+    </script>
+    
+    <!-- Seu conteúdo aqui -->
+
+    <div id="janelaCatalogobasico">
+      <button id="adicionar-campos">Adicionar campos</button>
+
+      <button id="fechar-janelabasico" onclick="fecharJanelabas()">X</button>
+      <label for="nome-completo">Nome completo:</label>
+      <input type="text" id="nome-completo" name="nome-completo">
+
+      <label for="cpf">CPF:</label>
+      <input type="text" id="cpf" name="cpf">
+
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email">
+
+      <label for="endereco">Endereço:</label>
+      <input type="text" id="endereco" name="endereco">
+      <label for="data-nascimento">Data de nascimento:</label>
+      <input type="date" id="data-nascimento" name="data-nascimento">
+
+      <label for="tipo-comercio">Tipo de comércio:</label>
+      <select id="tipo-comercio" name="tipo-comercio">
+        <option value="restaurante"class=op>Restaurante</option>
+        <option value="loja"class=op>Loja</option>
+        <option value="servicos"class=op>Serviços</option>
+        <option value="servicos"class=op>Bar</option>
+        <option value="servicos"class=op>lanchonete</option>
+        <option value="servicos"class=op>Salao de belza</option>
+        <option value="servicos"class=op>Materias de construção</option>
+        <option value="servicos"class=op>estamparia</option>
+        <option value="servicos"class=op>autopeças</option>
+        <option value="servicos"class=op>Outros</option>
+      </select>
+    </div>
+    <div id="janelaCatalogoweb">
+      <button id="fechar-janelaweb" onclick="fecharJanelaw()">X</button>
+      <label for="nome-completo">Nome completo:</label>
+      <input type="text" id="nome-completo" name="nome-completo">
+
+      <label for="cpf">CPF:</label>
+      <input type="text" id="cpf" name="cpf">
+
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email">
+
+      <label for="endereco">Endereço:</label>
+      <input type="text" id="endereco" name="endereco">
+      <label for="data-nascimento">Data de nascimento:</label>
+      <input type="date" id="data-nascimento" name="data-nascimento">
+
+      <label for="tipo-comercio">Tipo de comércio:</label>
+      <select id="tipo-comercio" name="tipo-comercio">
+        <option value="restaurante">Restaurante</option>
+        <option value="loja">Loja</option>
+        <option value="servicos">Serviços</option>
+        option value="servicos">Bar</option>
+        <option value="servicos">lanchonete</option>
+        <option value="servicos">Salao de belza</option>
+        <option value="servicos">Materias de construção</option>
+        <option value="servicos">estamparia</option>
+        <option value="servicos">autopeças</option>
+        <option value="servicos">Outros</option>
+      </select>
+    </div>
+    <div id="janelaCatalogoultra">
+      <button id="fechar-janelaultra" onclick="fecharJanelaul()">X</button>
+      <label for="nome-completo">Nome completo:</label>
+      <input type="text" id="nome-completo" name="nome-completo">
+
+      <label for="cpf">CPF:</label>
+      <input type="text" id="cpf" name="cpf">
+
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email">
+
+      <label for="endereco">Endereço:</label>
+      <input type="text" id="endereco" name="endereco">
+      <label for="data-nascimento">Data de nascimento:</label>
+      <input type="date" id="data-nascimento" name="data-nascimento">
+
+
+      <label for="tipo-comercio">Tipo de comércio:</label>
+      <select id="tipo-comercio" name="tipo-comercio">
+        <option value="restaurante">Restaurante</option>
+        <option value="loja">Loja</option>
+        <option value="servicos">Serviços</option>
+        <option value="servicos">Bar</option>
+        <option value="servicos">lanchonete</option>
+        <option value="servicos">Salao de belza</option>
+        <option value="servicos">Materias de construção</option>
+        <option value="servicos">estamparia</option>
+        <option value="servicos">autopeças</option>
+        <option value="servicos">Outros</option>
+      
+      </select>
+    </div>
+  </body>
+</html>
